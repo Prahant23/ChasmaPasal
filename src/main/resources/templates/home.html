@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit=no>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css/}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.0.10/web-fonts-with-css/css/fontawesome-all.min.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/car.css}" />
+
+    <Title>ChasmaPasal : wear what fits you</Title>
+    <link rel="icon" type="image/png" th:href="@{/images/image.png}"/>
+
+</head>
+
+ <body>
+<!-- Comments-->
+    <div class="d-flex flex-column">
+        <div th:replace="fragments/header :: header"></div>
+    </div>
+    <!-- This div contains a carousel that is displaying some products with a short description -->
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Black/White sunglasses  For Men</h4>
+                                <p>Sunglasses are used to shade the eyes from sunlight. They are usually made of a plastic or metal frame and two lenses that are darkened to filter out light. Sunglasses can have prescription lenses like eyeglasses, but they can also have lenses that are not for correcting vision..</p>
+                                <br>
+                                <a th:href="@{~/shipping}">BUY NOW</a>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="data:image/jpeg;base64,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"
+                                                                                 class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>aviator sunglasses 2017</h4>
+                                <p>Aviator style sunglasses are intended to be worn under headgear and are characterised by dark, sometimes reflective lenses and thin monel,
+                                    steel or titanium metal frames with double or triple bridge and bayonet earpieces or flexible cable temples that hook more securely behind the ears
+                                    .</p>
+                                <a th:href="@{~/shipping}">BUY NOW</a>
+                            </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="data:image/jpeg;base64,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"
+                                                                                 class="mx-auto" alt="slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+    <div class="box-heading">
+        <h2 class="cnit-h2">New Product</h2>
+        <div class="float-right">
+            <a href="https://www.newmew.com/" style="color: #3f3f3f;" class="seeAll">See All &gt;</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+        <div class="card-deck">
+            <div class="card" th:each="product : ${products}" th:if="${!products.isEmpty()}">
+                <div class="heart i">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img class="card-img-top" th:if="${!product.getImageUrl().isEmpty()}" th:src="${product.getImageUrl()}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title" th:text="${product.getName()}"></h4>
+                    <p class="card-text" th:text="${product.getDescription()}"></p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <p class="textprice mb-0" th:text="${product.getPrice()}"></p>
+                    <div class="d-flex justify-content-end">
+                        <sec:authorize sec:authorize="hasRole('ROLE_ADMIN')">
+                            <button class="btn">
+                                <a  th:href="@{'product/edit/' + ${product.getId()}}" class="text-dark">Edit</a>
+                            </button>
+                            <button class="btn">
+                                <a  th:href="@{'product/delete/' + ${product.getId()}}" class="text-dark">Delete</a>
+                            </button>
+                        </sec:authorize>
+
+                        <sec:authorize sec:authorize="hasRole('ROLE_USER')">
+                            <form th:action="@{/cart/add/{id}(id=${product.id})}" method="post">
+                                <div class="buttons">
+                                    <button type="submit">Add to cart</button>
+                                </div>
+                            </form>
+                        </sec:authorize>
+
+                        <!--                                Buy Now-->
+
+                        <sec:authorize sec:authorize="hasRole('ROLE_USER')">
+                            <div class="buybuttons">
+                                <a th:href="@{~/shipping}" class="btn btn-primary">Buy Now</a>
+                            </div>
+                        </sec:authorize>
+
+
+                        <!--                            <sec:authorize sec:authorize="hasRole('ROLE_USER')">-->
+                        <!--                                <a th:href="${'/cart/add/' + product.getId()}" class="btn btn-primary" th:text="#{product.add}"></a>-->
+                        <!--                            </sec:authorize>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <p>This is my new section that shows below the card deck</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <script>
+        // Get the add to cart button element
+        const addToCartButton = document.querySelector('.buttons');
+
+        // Add a click event listener to the button
+        addToCartButton.addEventListener('click', () => {
+            // Display a confirmation message
+            alert('Item added to cart!');
+        });
+    </script>
+
+<!--//Link Js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script th:href="@{/js/main.js}"></script>
+<!--    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>-->
+<!--    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>-->
+<!--<script th:href="@{/js/product-card.js}"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+</body>
+</html>
